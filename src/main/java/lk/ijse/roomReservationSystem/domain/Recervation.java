@@ -52,90 +52,98 @@ class Recervation {
 
     public Recervation(){}
 
-    // public Recervation(Integer clientId, Integer roomId, Integer paymentId, Integer noAdult, Integer noChildren,Integer noRoom,
-    //         Date inDate,Date outDate){
-    //     // this.clientId=clientId;
-    //     this.roomId=roomId;
-    //     this.paymentId=paymentId;
-    //     this.noAdult=noAdult;
-    //     this.noChildren=noChildren;
-    //     this.noRoom=noRoom;
-    //     this.inDate=inDate;
-    //     this.outDate=outDate;
-    // }
+        public Recervation(Client client, Room room, Payment payment, Integer noAdult, Integer noChildren,Integer noRoom,
+            Date inDate,Date outDate){
+        this.client=client;
+        this.room=room;
+        this.payment=payment;
+        this.noAdult=noAdult;
+        this.noChildren=noChildren;
+        this.noRoom=noRoom;
+        this.inDate=inDate;
+        this.outDate=outDate;
+    }
 
-    // public Recervation(Integer reservationId,Integer clientId, Integer roomId, Integer paymentId, Integer noAdult, Integer noChildren,
-    //         Integer noRoom, Date inDate, Date outDate) {
-    //     this.reservationId=reservationId;
-    //     // this.clientId = clientId;
-    //     this.roomId = roomId;
-    //     this.paymentId = paymentId;
-    //     this.noAdult = noAdult;
-    //     this.noChildren = noChildren;
-    //     this.noRoom = noRoom;
-    //     this.inDate = inDate;
-    //     this.outDate = outDate;
-    // }
+    public Recervation(Integer reservationId,Client client, Room room, Payment payment, Integer noAdult, Integer noChildren,
+            Integer noRoom, Date inDate, Date outDate) {
+        this.reservationId=reservationId;
+        this.client = client;
+        this.room = room;
+        this.payment = payment;
+        this.noAdult = noAdult;
+        this.noChildren = noChildren;
+        this.noRoom = noRoom;
+        this.inDate = inDate;
+        this.outDate = outDate;
+    }
+
+    public void setReservationId(Integer reservationId) {
+        this.reservationId = reservationId;
+    }
+    public Integer getReservationId() {
+        return this.reservationId;
+    }
+    public void setClient(Client client) {
+        this.client = client;
+    }
+    public Client getClient() {
+        return this.client;
+    }
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+    public Room getRoom() {
+        return this.room;
+    }
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+    public Payment getPayment() {
+        return this.payment;
+    }
+    public void setNoAdult(Integer noAdult) {
+        this.noAdult = noAdult;
+    }
+    public Integer getNoAdult() {
+        return this.noAdult;
+    }
+    public void setNoChildren(Integer noChildren) {
+        this.noChildren = noChildren;
+    }
+    public Integer getNoChildren() {
+        return this.noChildren;
+    }
+    public void setNoRoom(Integer noRoom) {
+        this.noRoom = noRoom;
+    }
+    public Integer getNoRoom() {
+        return this.noRoom;
+    }
+    public void setInDate(Date inDate) {
+        this.inDate = inDate;
+    }
+    public Date getInDate() {
+        return this.inDate;
+    }
+    public void setOutDate(Date outDate) {
+        this.outDate = outDate;
+    }
+    public Date getOutDate() {
+        return this.outDate;
+    }
 	
-    // public void setReservationId(Integer reservationId) {
-    //     this.reservationId = reservationId;
-    // }
-    // public Integer getReservationId() {
-    //     return this.reservationId;
-    // }
-    // // public void setClientId(Integer clientId) {
-    // //     this.clientId = clientId;
-    // // }
-    // // public Integer getClientId() {
-    // //     return this.clientId;
-    // // }
-    // public void setRoomId(Integer roomId) {
-    //     this.roomId = roomId;
-    // }
-    // public Integer getRoomId() {
-    //     return this.roomId;
-    // }
-    // public void setPaymentId(Integer paymentId) {
-    //     this.paymentId = paymentId;
-    // }
-    // public Integer getPaymentId() {
-    //     return this.paymentId;
-    // }
-    // public void setNoAdult(Integer noAdult) {
-    //     this.noAdult = noAdult;
-    // }
-    // public Integer getNoAdult() {
-    //     return this.noAdult;
-    // }
-    // public void setNochildren(Integer nochildren) {
-    //     this.noChildren = nochildren;
-    // }
-    // public Integer getNochildren() {
-    //     return this.noChildren;
-    // }
-    // public void setNoRoom(Integer noRoom) {
-    //     this.noRoom = noRoom;
-    // }
-    // public Integer getNoRoom() {
-    //     return this.noRoom;
-    // }
-    // public void setInDate(Date inDate) {
-    //     this.inDate = inDate;
-    // }
-    // public Date getInDate() {
-    //     return this.inDate;
-    // }
-    // public void setOutDate(Date outDate) {
-    //     this.outDate = outDate;
-    // }
-    // public Date getOutDate() {
-    //     return this.outDate;
-    // }
-
-    // public String toString() {
-    //     return "{" + "reservationId=" + getReservationId() + ",clientId=" +/* getClientId() + */ ",roomId=" + getRoomId()
-    //             + ",paymentId=" + getPaymentId() + ",noAdult=" + getNoAdult() + ",nochildren=" + getNochildren()
-    //             + ",noRoom=" + getNoRoom() + ",inDate=" + getInDate() + ",outDate=" + getOutDate() + "}";
-    // }
+    public String toString() {
+        return "{" +
+            "reservationId=" + getReservationId() +
+            ",client=" + getClient() +
+            ",room=" + getRoom() +
+            ",payment=" + getPayment() +
+            ",noAdult=" + getNoAdult() +
+            ",noChildren=" + getNoChildren() +
+            ",noRoom=" + getNoRoom() +
+            ",inDate=" + getInDate() +
+            ",outDate=" + getOutDate() +
+            "}";
+    }
 
 }
